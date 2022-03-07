@@ -39,24 +39,7 @@ void setup() {
 //Starting drawing
 
 void draw() {
-  background(0);
-  image(backGround, 0, 0);
-  image(soil, 0, 160);
-  //life bar
-  int loop = 0;
-  int lifeX = 10; // heart of life's X location
-  while(loop < 3){
-    image(life, lifeX, 10);
-    lifeX += 60;
-    loop++;
-  }
-  //grass 
-  strokeWeight(0);
-  fill(124,204,25);
-  rect(0, 145, 640, 15);
-  //Hog
-  image(groundHog, 280, 80);
-  
+
   image(robot, robotX, robotY);
   //let soldier move
   if(soldierX > 640){  //drag the solder outside off the border
