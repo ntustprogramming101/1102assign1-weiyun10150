@@ -60,7 +60,7 @@ void draw() {
   strokeWeight(5);
   stroke(255, 255, 0);
   fill(253, 184, 19);
-  ellipse(590, 50, 120,120);
+  //ellipse(590, 50, 120,120);
   
                                /********************************Dynamic Graphic Part*************************/
   //generating moving objects
