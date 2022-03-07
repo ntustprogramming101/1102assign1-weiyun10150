@@ -55,7 +55,7 @@ void draw() {
   //Hog
   image(groundHog, 280, 80);
   
-  strokeWeight(0);
+ 
   //life bar
   int loop = 0;
   int lifeX = 10; // heart of life's X location
@@ -64,7 +64,7 @@ void draw() {
     lifeX += 60;
     loop++;
   }
-                               /********************************Dynamic Graphic Part*************************/
+                              /********************************Dynamic Graphic Part*************************/
   //generating moving objects
   image(robot, robotX, robotY);
   //let soldier move
@@ -76,15 +76,13 @@ void draw() {
   }
   image(soldier, soldierX, soldierY);
   //laser's body
-  
-  
-  
   if(laserOffSetX == 160){      //shooting range
     laserOffSetX = 0;
   }
   else{
     laserOffSetX = laserOffSetX + 2;  //let the bullet fly
   }
+  strokeWeight(0);
   fill(255, 0, 0);
   rect((robotX - laserOffSetX ) , (robotY + laserOffSetY), 40, 10); 
   strokeWeight(0);
