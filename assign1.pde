@@ -84,7 +84,7 @@ void draw() {
   }
   noStroke();
   fill(255, 0, 0);
-  rect((robotX - laserOffSetX ) , (robotY + laserOffSetY), 40, 10); 
+  rect((robotX - laserOffSetX - 10) , (robotY + laserOffSetY), 40, 10); 
   strokeWeight(0);
 
 }
