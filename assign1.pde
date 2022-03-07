@@ -7,8 +7,8 @@ PImage life;
 PImage robot;
 PImage soldier;
 
-int robotY, robotX, laserOffSetX, laserOffSetY;
-int soldierY, soldierX = 0;
+float robotY, robotX, laserOffSetX, laserOffSetY;
+float soldierY, soldierX = 0;
 
 void setup() {
   size(640, 480);
