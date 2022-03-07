@@ -32,7 +32,14 @@ void setup() {
   //shooting laser
   laserOffSetX = 20;
   laserOffSetY = 33;
-  
+  //life bar
+  int loop = 0;
+  int lifeX = 10; // heart of life's X location
+  while(loop < 3){
+    image(life, lifeX, 10);
+    lifeX += 60;
+    loop++;
+  }
 }
 
 
@@ -42,14 +49,7 @@ void draw() {
   background(0);
   image(backGround, 0, 0);
   image(soil, 0, 160);
-  //life bar
-  int loop = 0;
-  int lifeX = 10; // heart of life's X location
-  while(loop < 3){
-    image(life, lifeX, 10);
-    lifeX += 60;
-    loop++;
-  }
+  
   //grass 
   strokeWeight(0);
   fill(124,204,25);
@@ -60,13 +60,13 @@ void draw() {
   strokeWeight(5);
   stroke(255, 255, 0);
   fill(253, 184, 19);
-  circle(590, 50, 120);
+  //ellipse(590, 50, 120,120);
   
                                /********************************Dynamic Graphic Part*************************/
   //generating moving objects
   image(robot, robotX, robotY);
   //let soldier move
-  if(soldierX > 640){  //drag the solder back outside off the border
+  if(soldierX > 640){  //drag the solder outside off the border
     soldierX = 0;
   }
   else{
@@ -74,8 +74,9 @@ void draw() {
   }
   image(soldier, soldierX, soldierY);
   //laser's body
-  fill(255, 0, 0);
   strokeWeight(0);
+  fill(255, 0, 0);
+  
   
   if(laserOffSetX == 160){      //shooting range
     laserOffSetX = 0;
