@@ -85,6 +85,7 @@ void draw() {
     laserOffSetX = laserOffSetX + 2;  //let the bullet fly
   }
   strokeWeight(0);
+  stroke(255, 0 ,0);
   fill(255, 0, 0);
   rect((robotX - laserOffSetX ) , (robotY + laserOffSetY), 40, 10); 
 }
