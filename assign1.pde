@@ -66,7 +66,7 @@ void draw() {
   //generating moving objects
   image(robot, robotX, robotY);
   //let soldier move
-  if(soldierX > 640){  //drag the solder back outside off the border
+  if(soldierX > 640){  //drag the solder outside off the border
     soldierX = 0;
   }
   else{
