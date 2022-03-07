@@ -54,6 +54,7 @@ void draw() {
   stroke(255, 255, 0);
   fill(253, 184, 19);
   ellipse(590, 50, 120,120);
+  strokeWeight(0);
   //life bar
   int loop = 0;
   int lifeX = 10; // heart of life's X location
