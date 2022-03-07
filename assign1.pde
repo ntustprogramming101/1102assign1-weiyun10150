@@ -42,7 +42,11 @@ void draw() {
   background(0);
   image(backGround, 0, 0);
   image(soil, 0, 160);
-  
+  //sun
+  strokeWeight(5);
+  stroke(255, 255, 0);
+  fill(253, 184, 19);
+  ellipse(590, 50, 120,120);
   
   //grass 
   strokeWeight(0);
@@ -82,10 +86,5 @@ void draw() {
   fill(255, 0, 0);
   rect((robotX - laserOffSetX ) , (robotY + laserOffSetY), 40, 10); 
   strokeWeight(0);
-  //sun
-  strokeWeight(5);
-  stroke(255, 255, 0);
-  fill(253, 184, 19);
-  ellipse(590, 50, 120,120);
-  
+
 }
