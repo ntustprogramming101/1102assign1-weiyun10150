@@ -7,7 +7,7 @@ PImage life;
 PImage robot;
 PImage soldier;
 
-float robotY, robotX, laserOffSetX, laserOffSetY;
+float robotY, robotX, laserOffsetX, laserOffsetY;
 float soldierY, soldierX = 0;
 
 void setup() {
@@ -30,8 +30,8 @@ void setup() {
   int[] robotXseeds = {160, 240, 320, 400};   //add some random position seeds
   robotX = robotXseeds[floor(random(0, 3))];
   //shooting laser
-  laserOffSetX = 20;
-  laserOffSetY = 33;
+  laserOffsetX = 20;
+  laserOffsetY = 33;
  
 }
 
@@ -46,7 +46,7 @@ void draw() {
   strokeWeight(5);
   stroke(255, 255, 0);
   fill(253, 184, 19);
-  ellipse(590, 50, 120,120);
+  ellipse(590, 50, 125,125);
   
   //grass 
   noStroke();
@@ -61,7 +61,7 @@ void draw() {
   int lifeX = 10; // heart of life's X location
   while(loop < 3){
     image(life, lifeX, 10);
-    lifeX += 60;
+    lifeX += 70;
     loop++;
   }
                               /********************************Dynamic Graphic Part*************************/
@@ -76,15 +76,15 @@ void draw() {
   }
   image(soldier, soldierX, soldierY);
   //laser's body
-  if(laserOffSetX == 160){      //shooting range
-    laserOffSetX = 0;
+  if(laserOffsetX == 160){      //shooting range
+    laserOffsetX = 0;
   }
   else{
-    laserOffSetX = laserOffSetX + 2;  //let the bullet fly
+    laserOffsetX = laserOffsetX + 2;  //let the bullet fly
   }
   noStroke();
   fill(255, 0, 0);
-  rect((robotX - laserOffSetX - 10) , (robotY + laserOffSetY), 40, 10, 30); 
+  rect((robotX - laserOffsetX - 10) , (robotY + laserOffsetY), 40, 10, 30); 
   strokeWeight(0);
 
 }
