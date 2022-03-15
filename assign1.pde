@@ -20,15 +20,15 @@ void setup() {
   robot = loadImage("img/robot.png");
   soldier = loadImage("img/soldier.png");
   //seeds
-  int[] soldierYseeds = {160, 240, 320, 400, 480};   //add some random position seeds
-  soldierY = soldierYseeds[floor(random(0, 4))];
-  int[] robotYseeds = {160, 240, 320, 400, 480};   //add some random position seeds
-  robotY = robotYseeds[floor(random(0, 4))];
+  int[] soldierYseeds = {160, 240, 320, 400};   //add some random position seeds
+  soldierY = soldierYseeds[floor(random(0, 3))];
+  int[] robotYseeds = {160, 240, 320, 400};   //add some random position seeds
+  robotY = robotYseeds[floor(random(0, 3))];
   while(robotY == soldierY){                      // robot don't want to be a killer machine!
-    robotY = robotYseeds[floor(random(0, 4))];
+    robotY = robotYseeds[floor(random(0, 3))];
   }
-  int[] robotXseeds = {160, 240, 320, 400, 480};   //add some random position seeds
-  robotX = robotXseeds[floor(random(0, 4))];
+  int[] robotXseeds = {160, 240, 320, 400};   //add some random position seeds
+  robotX = robotXseeds[floor(random(0, 3))];
   //shooting laser
   laserOffSetX = 20;
   laserOffSetY = 33;
@@ -69,7 +69,7 @@ void draw() {
   image(robot, robotX, robotY);
   //let soldier move
   if(soldierX > 640){  //drag the solder outside off the border
-    soldierX = 0;
+    soldierX = -20;
   }
   else{
     soldierX = soldierX + 5;
